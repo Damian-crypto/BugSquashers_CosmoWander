@@ -6,9 +6,9 @@ This is a React + Vite frontend
 
 To get started, 
 
-1) Go to the Frontend directory (cd frontend)
+(1) Go to the Frontend directory (cd frontend)
 
-2)run the following commands:   
+(2)run the following commands:   
 
 npm install
 
