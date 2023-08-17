@@ -18,8 +18,8 @@ function Login() {
 
 
     return (
-        <div className="bg-white bg-hero-image h-screen bg-cover bg-no-repeat relative bg-center sm:hidden" >
-            <div className="absolute inset-0 flex justify-center items-center sm:hidden">
+        <div className="bg-white bg-hero-image h-screen bg-cover bg-no-repeat relative bg-center " >
+            <div className="absolute inset-0 flex justify-center items-center ">
                 <div className="w-full mr-2 ml-2 md:mr-2 md:ml-2 lg:mr-3 lg:ml-3 h-full bg-overlay-color bg-opacity-60" ></div>
             </div>
 
