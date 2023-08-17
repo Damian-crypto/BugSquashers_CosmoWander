@@ -1,4 +1,4 @@
-# CosmoWanderWander Frontend
+# CosmoWander Frontend
 
 This is a React + Vite frontend
 
