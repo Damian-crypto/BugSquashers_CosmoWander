@@ -15,6 +15,7 @@ export default {
         'bg-purple-dark': '#251D3A',
         'orange-light': '#E78F42',
         'white-white': '#FFFFFF',
+        'button-purple-highlight': '#8000FF',
 
       },
       keyframes: {
@@ -24,6 +25,16 @@ export default {
           '100%': { borderWidth: '0px' },
         },
       },
+      width: {
+        '80': '80%'
+      },
+      minWidth: {
+        '0': '0',
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75%',
+        'full': '100%',
+       }
       
   },
   },
