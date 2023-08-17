@@ -14,6 +14,4 @@ npm install
 
 npm install vite
 
-npm run dev
-
-This will start the development server.
+npm run dev(This will start the development server)
