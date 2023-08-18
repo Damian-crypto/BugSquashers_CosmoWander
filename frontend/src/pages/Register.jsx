@@ -44,7 +44,7 @@ function Register() {
                     <img class="w-15 h-auto mr-2" src="/images/logo.png" alt="logo" />
 
                 </a>
-                <div class="min-w-3/4 bg-gradient-to-br from-bg-purple-light to-bg-purple-dark rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 border-none">
+                <div class="min-w-3/4 bg-gradient-to-br from-bg-purple-light to-bg-purple-dark rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0 border-none">
                     <div class="p-6 space-y-4 md:space-y-6 sm:p-8 w-full">
                         <h1 class="text-xl font-bold text-center leading-tight tracking-tight text-orange-light md:text-2xl ">
                             Registration 
@@ -127,7 +127,7 @@ function Register() {
                             )}
 
 
-                            <p class="text-sm font-light text-orange-light ">
+                            <p class="text-center text-sm font-light text-orange-light ">
                                 Already have an account? <button class="font-medium text-primary-600 hover:underline dark:text-primary-500" onClick={handleRegisterButtonClick}>Login</button>
                             </p>
                         </form>

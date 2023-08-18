@@ -10,12 +10,13 @@ export default {
         'hero-image': "url('/images/background.gif')",
       },
       colors: {
-        'overlay-color' : '#53284B',
+        'overlay-color': '#53284B',
         'bg-purple-light': '#2A2550',
         'bg-purple-dark': '#251D3A',
         'orange-light': '#E78F42',
-        'white-white': '#FFFFFF',
+        'white-white': '#FFFFFF',
         'button-purple-highlight': '#8000FF',
+        'text-beige': '#CEAB8C',
 
       },
       keyframes: {
@@ -34,9 +35,12 @@ export default {
         '1/2': '50%',
         '3/4': '75%',
         'full': '100%',
-       }
-      
-  },
+      },
+      fontFamily: {
+        'space-mono': ['"Space Mono"', 'monospace'],
+      }
+
+    },
   },
   plugins: [],
 }
