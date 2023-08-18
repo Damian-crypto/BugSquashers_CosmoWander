@@ -1,31 +1,31 @@
 package com.bugsquashers.cosmowander.entity;
 
 import jakarta.persistence.*;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Generated;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Date;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Table(name = "booking")
-public class Booking {
+@Table(name = "journey")
+public class Journey {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int bookingRefId;
-    private String cabinType;
-    private int noOfPassengers;
-    private int costPerSeat;
-    private int totalCost;
-    private char paymentMethod;
+    private String journeyId;
+    private String startingAt;
+    private LocalDate startingDate;
+    private String stopAt_1;
+    private String stopAt_2;
+    private String stopAt_3;
+    private String stopAt_4;
+    private int duration;
+    private int distance;
     private LocalDate departureDate;
     private LocalTime departureTime;
+    private int noOfPassengers;
 }

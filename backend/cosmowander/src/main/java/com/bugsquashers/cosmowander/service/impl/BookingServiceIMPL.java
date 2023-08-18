@@ -23,9 +23,9 @@ public class BookingServiceIMPL implements BookingService {
     @Override
     public String saveBooking(BookingSaveRequestDTO bookingSaveRequestDTO) {
         Booking booking = modelMapper.map(bookingSaveRequestDTO,Booking.class);
-        if(!bookingRepo.existsById(booking.getBookingId())){
+        if(!bookingRepo.existsById(booking.getBookingRefId())){
             bookingRepo.save(booking);
-            return booking.getBookingType()+"saved successfully";
+            return booking.getBookingRefId()+" saved successfully";
         }else{
             throw new DuplicateKeyException("Already added");
         }
