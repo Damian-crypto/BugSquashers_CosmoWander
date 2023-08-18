@@ -26,9 +26,9 @@ function LandingPage() {
 
   return (
 
-    <div className="bg-white bg-hero-image h-screen bg-cover bg-repeat-y relative bg-center " >
-      <div className="absolute inset-0 flex justify-center items-center h-screen">
-        <div className="w-full mr-2 ml-2 md:mr-2 md:ml-2 lg:mr-3 lg:ml-3 h-screen bg-overlay-color bg-opacity-60" ></div>
+    <div className="bg-white bg-hero-image sm:h-auto sm:bg-cover sm:bg-local bg-center relative " >
+      <div className="absolute inset-0 flex justify-center items-center h-full">
+        <div className="w-full mr-2 ml-2 md:mr-2 md:ml-2 lg:mr-3 lg:ml-3 h-full bg-overlay-color bg-opacity-60" ></div>
       </div>
       <header className="absolute inset-x-0 top-0 z-50">
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -115,7 +115,7 @@ function LandingPage() {
 
       
         
-        <div className="relative isolate mx-auto max-w-2xl py-32 sm:py-48 lg:py-48 h-screen">
+        <div className="relative isolate mx-auto max-w-2xl py-32 sm:py-48 lg:py-48 h-full">
          
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white sm:text-6xl">
