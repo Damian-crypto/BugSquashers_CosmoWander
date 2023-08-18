@@ -21,9 +21,12 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private String name;
+    private String firstName;
+    private String lastName;
+    private String location;
+    private String contactNumber;
     private String email;
-    private String password;
+    private String sid;
 
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -35,7 +38,7 @@ public class User implements UserDetails {
 
     @Override
     public String getPassword() {
-        return password;
+        return sid;
     }
 
     @Override

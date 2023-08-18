@@ -9,8 +9,6 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class DTORegister {
-    private String name;
-    private String email;
-    private String password;
+public class RegistrationRequest {
+    private String sid;
 }
