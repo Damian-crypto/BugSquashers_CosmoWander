@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import CountdownTimer from "../components/CountdownTimer";
+import PackageCard from "../components/PackageCard";
 
 function Home() {
- 
+
 
   return (
     <div className="bg-white bg-hero-image sm:h-auto sm:bg-cover sm:bg-local bg-center relative ">
@@ -14,30 +15,31 @@ function Home() {
 
       {/* corsol start */}
       <div className="relative isolate mx-auto max-w-2xl py-32 sm:py-48 lg:py-48 h-full">
-         
-          
-            
-            <div className="flex justify-center">
-                <CountdownTimer />
-                
-            </div>
-            {/* carousel */}
-            <div className="text-center">
-            <h1 className="text-4xl font-bold text-white sm:text-6xl">
-              Journey Beyond the Stars: Explore Limitless Horizons With Us
-            </h1>            
-            <p className="mt-6 text-lg leading-8 text-white">
-              “Step beyond the familiar, and embrace the extraordinary. 'CosmoWander' is an invitation to discover the uncharted,
-              to be captivated by the cosmos, and to find your next adventure waiting in the infinite expanse”
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              
-            </div>
 
 
 
-          </div>
+        <div className="flex justify-center">
+          <CountdownTimer />
+
         </div>
+
+        {/* card container started*/}
+        <div className="flex flex-wrap justify-center">
+  {Array.from({length: 4}).map((_, index) => (
+    <PackageCard
+      key={index}
+      productImage="/sample-product-image.jpg"
+      productName="Product Name"
+      productRating={4.5}
+      productPrice={19.99}
+      onAddToCart={() => console.log("Add to cart clicked")}
+    />
+  ))}
+</div>
+
+        {/* card container ended */}
+
+      </div>
       {/* corsol end */}
     </div>
   );
