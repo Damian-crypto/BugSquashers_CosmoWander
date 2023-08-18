@@ -34,6 +34,8 @@ public class SecurityConfiguration {
                 .authenticationProvider(authenticationProvider)
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 
+//        httpSecurity.csrf().disable().authorizeHttpRequests().requestMatchers("/**").permitAll();
+
         return httpSecurity.build();
     }
 }
