@@ -12,12 +12,14 @@ import java.time.LocalTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Table(name = "journey_spaceship")
-public class JourneySpaceship {
+@Table(name = "event")
+public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String spaceshipRegId;
-    private String spaceshipName;
-    private String journeyId;
-    private int costPerSeat;
+    private String eventId;
+    private char paymentMethod;
+    private LocalDate arrivalDate;
+    private LocalTime arrivalTime;
+    private LocalDate departureDate;
+    private LocalTime departureTime;
 }

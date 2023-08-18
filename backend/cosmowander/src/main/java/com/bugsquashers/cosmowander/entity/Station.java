@@ -5,20 +5,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
-
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Table(name = "spaceship")
-public class Spaceship {
+@Table(name = "stations")
+public class Station {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String spaceshipRegId;
-
-    private String spaceshipName;
-    private int totalSeatCapacity;
-    private int spaceshipSpeed;
-
+    private String stationId;
+    private String stationName;
 }

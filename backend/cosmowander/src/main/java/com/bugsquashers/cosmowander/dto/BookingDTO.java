@@ -1,25 +1,16 @@
-package com.bugsquashers.cosmowander.entity;
+package com.bugsquashers.cosmowander.dto;
 
-import jakarta.persistence.*;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Generated;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Date;
 
-@Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Table(name = "passenger_booking")
-public class Booking {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class BookingDTO {
     private int bookingRefId;
     private String cabinType;
     private int noOfPassengers;

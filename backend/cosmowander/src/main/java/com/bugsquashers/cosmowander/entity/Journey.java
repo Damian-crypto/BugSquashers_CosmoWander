@@ -17,15 +17,17 @@ public class Journey {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String journeyId;
-    private String startingAt;
+    private String startingStationId;
     private LocalDate startingDate;
-    private String stopAt_1;
-    private String stopAt_2;
-    private String stopAt_3;
-    private String stopAt_4;
+    private LocalDate startingTime;
+    private String stationId;
+    private LocalDate arrivalDate;
     private int duration;
     private int distance;
+    private int noOfPassengers;
+    private int noOfInterchanges;
+    private int totalCost;
+    private int weight;
     private LocalDate departureDate;
     private LocalTime departureTime;
-    private int noOfPassengers;
 }

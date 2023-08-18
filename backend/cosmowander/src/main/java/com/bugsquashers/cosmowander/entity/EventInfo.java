@@ -5,13 +5,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Table(name = "booking_journey_spaceship")
-public class BookingJourneySpaceship {
+@Table(name = "event_info")
+public class EventInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String journeyId;
+    private String eventId;
+    private String eventName;
 }
