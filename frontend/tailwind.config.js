@@ -19,6 +19,7 @@ export default {
         'button-purple-highlight': '#8000FF',
         'text-beige': '#CEAB8C',
         'text-purple-light': '#D7AFFF',
+        'card-purple-light': '#5C2BA9',
 
       },
       keyframes: {

@@ -49,6 +49,62 @@ function Home() {
         ticket_price: "99",
         imageUrl: "../src/assets/package_images/6.png",
         description: "Lorem ipsum dolor sit 12345 amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum!"
+    },
+    {
+        id: 6,
+        title: "Cosmo Wander Package No.6",
+        departure_time: "2022-05-12",
+        ticket_price: "99",
+        imageUrl: "../src/assets/package_images/5.png",
+        description: "Lorem ipsum dolor sit 1234 amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum!"
+    },
+    {
+        id: 7,
+        title: "Cosmo Wander Package No.7",
+        departure_time: "2022-05-12",
+        ticket_price: "99",
+        imageUrl: "../src/assets/package_images/2.png",
+        description: "Lorem ipsum dolor sit 123 amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum!"
+    },
+    {
+        id: 8,
+        title: "Cosmo Wander Package No.8",
+        departure_time: "2022-05-12",
+        ticket_price: "99",
+        imageUrl: "../src/assets/package_images/1.png",
+        description: "Lorem ipsum dolor sit 12 amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum!"
+    },
+    {
+        id: 9,
+        title: "Cosmo Wander Package No.9",
+        departure_time: "2022-05-12",
+        ticket_price: "99",
+        imageUrl: "../src/assets/package_images/3.png",
+        description: "Lorem ipsum dolor sit 1 amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum!"
+    },
+    {
+      id: 10,
+      title: "Cosmo Wander Package No.10",
+      departure_time: "2022-05-12",
+      ticket_price: "99",
+      imageUrl: "../src/assets/package_images/4.png",
+      description: "Lorem ipsum dolor sit 1 amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum!"
+    },
+    {
+      id: 11,
+      title: "Cosmo Wander Package No.11",
+      departure_time: "2022-05-12",
+      ticket_price: "99",
+      imageUrl: "../src/assets/package_images/5.png",
+      description: "Lorem ipsum dolor sit 1 amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis 123 harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum!"
+    },
+    {
+      id: 12,
+      title: "Cosmo Wander Package No.12",
+      departure_time: "2022-05-12",
+      ticket_price: "99",
+      imageUrl: "../src/assets/package_images/6.png",
+      description: "Lorem ipsum dolor sit 1 amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam 1234 blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum!"
     }
 ]
 
@@ -85,17 +141,19 @@ function Home() {
 
       </div>
 
-      <div className="relative isolate mx-auto max-w-2xl py-32 sm:py-48 lg:py-48 h-full">
+      <div className="relative isolate mx-auto max-w-2xl pb-8 pt-32 sm:pt-48 lg:pt-48 h-full">
 
 
 
-        <div className="flex justify-center">
+        <div className=" mx-5 sm:mx-8 md:mx-16 flex justify-center">
           <CountdownTimer />
 
         </div>
 
+      </div>
+
         {/* card container started*/}
-        <div className="flex flex-wrap justify-center">
+      <div className="relative items-center justify-center isolate mx-5 sm:mx-8 md:mx-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
           {packageData.map((packagedata) => {
             return (
@@ -113,11 +171,11 @@ function Home() {
           })}
             
   
-        </div>
+      </div>
 
         {/* card container ended */}
 
-      </div>
+      
       {/* corsol end */}
     </div>
   );
