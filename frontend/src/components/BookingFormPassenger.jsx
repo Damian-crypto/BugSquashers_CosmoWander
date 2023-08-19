@@ -7,7 +7,7 @@ function BookingFormPassenger(props) {
     return (
         <div class="p-6 space-y-4 md:space-y-6 sm:p-8 w-full">
             <h1 class="text-xl font-bold text-center leading-tight tracking-tight text-orange-light md:text-2xl ">
-                Booking
+                Passenger Booking
             </h1>
             <form class="space-y-4 md:space-y-6" action="#">
                 <table class="w-full">
@@ -75,9 +75,9 @@ function BookingFormPassenger(props) {
                 </div>
                 <div>
                     <label for="location" class="block mb-2 text-sm font-medium text-orange-light ">Payment Methods</label>
-                    <RadioGroupPayment 
-                    selectedRadio={selectedRadio}
-                    handleRadioChange={handleRadioChange}
+                    <RadioGroupPayment
+                        selectedRadio={selectedRadio}
+                        handleRadioChange={handleRadioChange}
                     />
                 </div>
 

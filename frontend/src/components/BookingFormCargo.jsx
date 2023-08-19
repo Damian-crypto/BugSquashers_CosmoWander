@@ -1,6 +1,6 @@
 function BookingFormCargo () {
     return(
-        <div></div>
+        <div>cargo</div>
     );
 }
 

@@ -87,7 +87,7 @@ function Booking() {
                 </a>
                 <div class="min-w-3/4 bg-gradient-to-br from-bg-purple-light to-bg-purple-dark shadow  md:mt-0 sm:max-w-md xl:p-0 border-none">
 
-                    {bookingForm && bookingType === 0(
+                    {bookingForm && bookingType === 0 &&(
                     
                         <BookingFormPassenger 
                         selectedRadio={selectedRadio}
@@ -99,7 +99,7 @@ function Booking() {
                         handleConfirmButtonClick={handleConfirmButtonClick} 
                         />
                     )}
-                    {bookingForm && bookingType === 1(
+                    {bookingForm && bookingType === 1 &&(
                     
                     <BookingFormPnC
                     selectedRadio={selectedRadio}
@@ -111,7 +111,7 @@ function Booking() {
                     handleConfirmButtonClick={handleConfirmButtonClick} 
                     />
                 )}
-                {bookingForm && bookingType === 2(
+                {bookingForm && bookingType === 2 &&(
                     
                     <BookingFormCargo 
                     selectedRadio={selectedRadio}
@@ -123,7 +123,7 @@ function Booking() {
                     handleConfirmButtonClick={handleConfirmButtonClick} 
                     />
                 )}
-                {bookingForm && bookingType === 3(
+                {bookingForm && bookingType === 3 &&(
                     
                     <BookingFormSpecial 
                     selectedRadio={selectedRadio}

@@ -2,12 +2,20 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import { useNavigate } from 'react-router-dom';
 import Carousel from "../components/Carousel";
-import PackageInformationCard from "../components/PackageInformationCard";
+import {
+    PackageInformationCardPassenger, PackageInformationCardCargo,
+    PackageInformationCardSpecial, PackageInformationCardPnC
+} from "../components/PackageInformationCard";
 
 function PackageInformation() {
 
     const navigate = useNavigate();
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [mode, setMode] = useState(1);
+    // 0 = passenger 
+    // 1 = passenger & cargo 
+    // 2 = cargo 
+    // 3 = special 
     const nextSlide = () => {
         setCurrentSlide((prev) => (prev === 4 ? 0 : prev + 1));
     };
@@ -47,11 +55,37 @@ function PackageInformation() {
                     />
 
 
-                    <PackageInformationCard
-                        selectedRadio={selectedRadio}
-                        handleRadioChange={handleRadioChange}
-                        handleBookButtonClick={handleBookButtonClick}
-                    />
+                    {mode === 0 && (
+                        <PackageInformationCardPassenger
+                            selectedRadio={selectedRadio}
+                            handleRadioChange={handleRadioChange}
+                            handleBookButtonClick={handleBookButtonClick}
+                        />
+                    )}
+
+                    {mode === 1 && (
+                        <PackageInformationCardPnC
+                            selectedRadio={selectedRadio}
+                            handleRadioChange={handleRadioChange}
+                            handleBookButtonClick={handleBookButtonClick}
+                        />
+                    )}
+
+                    {mode === 2 && (
+                        <PackageInformationCardCargo
+                            selectedRadio={selectedRadio}
+                            handleRadioChange={handleRadioChange}
+                            handleBookButtonClick={handleBookButtonClick}
+                        />
+                    )}
+
+                    {mode === 3 && (
+                        <PackageInformationCardSpecial
+                            selectedRadio={selectedRadio}
+                            handleRadioChange={handleRadioChange}
+                            handleBookButtonClick={handleBookButtonClick}
+                        />
+                    )}
 
                 </div >
             </div >
