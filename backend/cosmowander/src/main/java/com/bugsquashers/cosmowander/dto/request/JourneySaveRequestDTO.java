@@ -1,6 +1,5 @@
-package com.bugsquashers.cosmowander.entity;
+package com.bugsquashers.cosmowander.dto.request;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,15 +7,10 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-@Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Table(name = "journey")
-public class Journey {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int journeyId;
+public class JourneySaveRequestDTO {
     private String startingStationId;
     private LocalDate startingDate;
     private LocalTime startingTime;
