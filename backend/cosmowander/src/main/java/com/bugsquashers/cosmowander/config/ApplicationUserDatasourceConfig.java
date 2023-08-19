@@ -20,7 +20,11 @@ import java.util.HashMap;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(
-        basePackages = {"com.bugsquashers.cosmowander.user"},
+        basePackages = {
+                "com.bugsquashers.cosmowander.user",
+                "com.bugsquashers.cosmowander.entity",
+                "com.bugsquashers.cosmowander.repository"
+        },
         entityManagerFactoryRef = "UserEntityManagerFactory",
         transactionManagerRef = "UserTransactionManager"
 )
@@ -43,7 +47,11 @@ public class ApplicationUserDatasourceConfig {
 
         return managerFactory
                 .dataSource(userDataSource())
-                .packages("com.bugsquashers.cosmowander.user")
+                .packages(
+                        "com.bugsquashers.cosmowander.user",
+                        "com.bugsquashers.cosmowander.entity",
+                        "com.bugsquashers.cosmowander.repository"
+                )
                 .persistenceUnit("cosmowander")
                 .properties(props)
                 .build();
