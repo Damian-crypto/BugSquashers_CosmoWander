@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
-
+import FingerprintButton from "../components/FingerprintButton";
 
 
 function Login() {
@@ -33,7 +33,7 @@ function Login() {
                 <a href="#" class="flex items-center mb-1 text-2xl font-semibold ">
                     <img class=" w-20 h-14 mr-2" src="/images/logo.png" alt="logo" />
                 </a>
-                <div class="w-full bg-transparent sm:bg-gradient-to-br from-bg-purple-light to-bg-purple-dark sm:rounded-lg sm:shadow border-none md:mt-0 sm:max-w-md xl:p-0 ">
+                <div class="w-full bg-transparent sm:bg-gradient-to-br from-bg-purple-light to-bg-purple-dark sm:shadow border-none md:mt-0 sm:max-w-md xl:p-0 ">
                     <div class=" space-y-4 md:space-y-6 sm:p-8">
                         <h1 class="mb-14 sm:mb-0 text-2xl font-bold text-center leading-tight tracking-tight text-orange-light md:text-2xl dark:text-orange-light">
                             Login
@@ -46,25 +46,10 @@ function Login() {
                                 <p><span class="font-bold" >CosmosWander</span> invites you to explore the unknown, marvel at the universe, and find your next adventure in the vast expanse</p>
                             </div>
 
-                            <div className="mt-10 grid grid-rows-2 items-center justify-center">
-
-                                <div>
-                                    <input type="text" name="location" id="location" placeholder="•   •   •   •   •" class="text-center block w-full p-2.5 bg-white-white  text-white-white sm:text-sm bg-opacity-10 text-opacity-100 font-bold focus:outline-none" required="" />
-                                    <label for="location" class="text-center block mb-2 text-sm font-medium text-orange-light ">Code</label>
-                                </div>
-
-                                <button class="mx-auto w-36 inline-flex items-center justify-center p-0.5 overflow-hidden text-sm "
-                                    onClick={handleLoginButtonClick}
-                                >
-
-                                    <span class="mx-auto w-36 relative px-5 py-2.5 transition-all ease-in duration-75 flex items-center justify-center">
-                                        <img class="w-auto h-auto mr-2" src="/images/fingerprint.png" alt="logo" />
-                                    </span>
-                                </button>
-                            </div>
+                            <FingerprintButton handleFingerprintButtonClick={handleLoginButtonClick} />
 
                             <p class="text-center text-sm font-light text-orange-light dark:text-orange-light">
-                                Don’t have an account yet? <button class="font-medium text-primary-600 hover:underline dark:text-primary-500" onClick={handleRegisterButtonClick}>Register Now</button>
+                                Don’t have an account yet? <button class="font-bold text-primary-600 hover:underline dark:text-primary-500" onClick={handleRegisterButtonClick}>Register Now</button>
                             </p>
                         </form>
                     </div>

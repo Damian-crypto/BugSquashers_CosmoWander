@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react'
+import FingerprintButton from "../components/FingerprintButton";
 
 
 
@@ -44,7 +45,7 @@ function Register() {
                     <img class="w-15 h-auto mr-2" src="/images/logo.png" alt="logo" />
 
                 </a>
-                <div class="min-w-3/4 bg-gradient-to-br from-bg-purple-light to-bg-purple-dark rounded-lg shadow  md:mt-0 sm:max-w-md xl:p-0 border-none">
+                <div class="min-w-3/4 bg-gradient-to-br from-bg-purple-light to-bg-purple-dark shadow  md:mt-0 sm:max-w-md xl:p-0 border-none">
                     <div class="p-6 space-y-4 md:space-y-6 sm:p-8 w-full">
                         <h1 class="text-xl font-bold text-center leading-tight tracking-tight text-orange-light md:text-2xl ">
                             Registration 
@@ -85,22 +86,7 @@ function Register() {
 
                             {fingerprintButton && (
 
-                                <div className="mt-10 grid grid-rows-2 items-center justify-center">
-
-                                    <div>
-                                        <input type="text" name="location" id="location" placeholder="•   •   •   •   •" class="text-center block w-full p-2.5 bg-white-white  text-white-white sm:text-sm bg-opacity-10 text-opacity-100 font-bold focus:outline-none" required="" />
-                                        <label for="location" class="text-center block mb-2 text-sm font-medium text-orange-light ">Code</label>
-                                    </div>
-
-                                    <button class="mx-auto w-36 inline-flex items-center justify-center p-0.5 overflow-hidden text-sm "
-                                        onClick={handleFingerprintClick}
-                                    >
-
-                                        <span class="mx-auto w-36 relative px-5 py-2.5 transition-all ease-in duration-75 flex items-center justify-center">
-                                            <img class="w-auto h-auto mr-2" src="/images/fingerprint.png" alt="logo" />
-                                        </span>
-                                    </button>
-                                </div>
+                                <FingerprintButton handleFingerprintButtonClick={handleFingerprintClick} />
                             )}
 
                             {registerButton && (
@@ -128,7 +114,7 @@ function Register() {
 
 
                             <p class="text-center text-sm font-light text-orange-light ">
-                                Already have an account? <button class="font-medium text-primary-600 hover:underline dark:text-primary-500" onClick={handleRegisterButtonClick}>Login</button>
+                                Already have an account? <button class=" text-primary-600 hover:underline dark:text-primary-500 font-bold" onClick={handleRegisterButtonClick}>Login</button>
                             </p>
                         </form>
                     </div>
