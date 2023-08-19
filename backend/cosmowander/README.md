@@ -35,3 +35,12 @@ Authorization: Bearer <YOUR JWT TOKEN>
   "sid": "n5e4i3l2a1john"
 }
 ```
+### Booking CRUD
+
+POST `/api/v1/booking/save`
+
+PUT `/api/v1/booking/update`
+
+GET `/api/v1/booking/get-all-bookings`
+
+GET by Id `/api/v1/booking/get-by-id?id=1`
