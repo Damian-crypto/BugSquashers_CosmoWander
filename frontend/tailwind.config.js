@@ -46,6 +46,9 @@ export default {
       },
       fontFamily: {
         'space-mono': ['"Space Mono"', 'monospace'],
+      },
+      dropShadow: {
+        '3xl': '2px 5px 3px rgba(0, 0, 0, 0.5)',
       }
 
     },

@@ -45,7 +45,7 @@ function LandingPage() {
           <div className="flex lg:hidden">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white hover:text-orange-50"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white drop-shadow-3xl hover:text-orange-50"
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
@@ -54,13 +54,13 @@ function LandingPage() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12 ">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-white">
+              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-white drop-shadow-3xl">
                 {item.name}
               </a>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm font-semibold leading-6 text-white">
+            <a href="#" className="text-sm font-semibold leading-6 text-white drop-shadow-3xl">
               Log in <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
@@ -115,39 +115,47 @@ function LandingPage() {
 
       
         
-        <div className="relative isolate mx-auto max-w-2xl py-32 sm:py-48 lg:py-48 h-full">
+        <div className="relative isolate mx-auto max-w-3xl py-32 sm:py-32 lg:py-40 h-full">
          
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white sm:text-6xl">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-200 drop-shadow-3xl  ">
               Journey Beyond the Stars: Explore Limitless Horizons With Us
             </h1>
-            <p className="mt-6 text-lg leading-8 text-white">
+            
+            <p className="mt-16 text-lg sm:text-xl md:text-2xl lg:text-3xl leading-8 drop-shadow-3xl text-gray-200 ">
               “Step beyond the familiar, and embrace the extraordinary. 'CosmoWander' is an invitation to discover the uncharted,
               to be captivated by the cosmos, and to find your next adventure waiting in the infinite expanse”
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <button class="w-36 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
+            <div className="mt-16 flex items-center justify-center gap-x-6">
+              <button class="w-48 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 drop-shadow-3xl"
               onClick={handleRegisterButtonClick}>
-                <span class="w-36 relative px-5 py-2.5 transition-all ease-in duration-75 bg-gray-900 group-hover:bg-opacity-0">
+                <span class="w-48 relative px-5 py-2.5 transition-all ease-in duration-75 bg-gray-900 group-hover:bg-opacity-0">
                   Register Now
                 </span>
               </button>
-              <button class="w-36 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
+              <button class="w-48 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 drop-shadow-3xl"
               onClick={handleLoginButtonClick}
               >
-                <span class="w-36 relative px-5 py-2.5 transition-all ease-in duration-75 bg-gray-900 group-hover:bg-opacity-0">
+                <span class="w-48 relative px-5 py-2.5 transition-all ease-in duration-75 bg-gray-900 group-hover:bg-opacity-0">
                   Login
                 </span>
               </button>
             </div>
-
-
-
           </div>
         </div>
-        
-      {/* </div> */}
-      {/* <div className="relative isolate px-6 pt-14 lg:px-8 h-screen"></div> */}
+
+        <div className="relative flex inset-x-0 z-50 flex-col mx-28 items-center justify-center gap-y-4">
+            <img 
+            className="h-auto w-auto" 
+            src="/images/6.png" 
+            alt="logo" />
+            <div className="text-center">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-orange-600 drop-shadow-3xl  ">
+              Explore Our Galactic Advantages
+              </h1>
+            </div>
+        </div>
+       
     </div>
   )
 }
