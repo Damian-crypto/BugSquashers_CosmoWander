@@ -9,10 +9,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Table(name = "model")
-public class Model {
+@Table(name = "mode")
+public class Mode {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String modelId;
-    private String modelName;
+    private String modeId;
+    private String modeName;
 }
