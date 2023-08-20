@@ -237,7 +237,7 @@ export function PackageInformationCardPassenger(props) {
     return (
         <div class="h-max w-full bg-transparent sm:bg-gradient-to-br from-bg-purple-light to-bg-purple-dark sm:shadow border-none sm:my-6 sm:p-5 ">
             {/* <div class=" space-y-4 md:space-y-6 sm:p-8"> */}
-            <h1 class="mb-5 sm:mb-0 text-base font-bold text-left leading-tight tracking-tight text-orange-light md:text-2xl dark:text-orange-light">
+            <h1 class="mb-5 sm:mb-0 text-base font-bold text-left leading-tight tracking-tight text-orange-light md:text-lg xl:text-2xl dark:text-orange-light">
                 Package Name
             </h1>
             <div class="flex flex-col text-xs sm:text-base sm:flex-row sm:space-x-4 justify-between text-text-beige">
@@ -347,7 +347,7 @@ export function PackageInformationCardSpecial(props) {
     return (
         <div class="h-max w-full bg-transparent sm:bg-gradient-to-br from-bg-purple-light to-bg-purple-dark sm:shadow border-none sm:my-6 sm:p-5 ">
             {/* <div class=" space-y-4 md:space-y-6 sm:p-8"> */}
-            <h1 class="mb-5 sm:mb-0 text-base font-bold text-left leading-tight tracking-tight text-orange-light md:text-2xl dark:text-orange-light">
+            <h1 class="mb-5 sm:mb-0 text-base font-bold text-left leading-tight tracking-tight text-orange-light md:text-lg xl:text-2xl dark:text-orange-light">
                 Package Name
             </h1>
             <div class="flex flex-col text-xs sm:text-base sm:flex-row sm:space-x-4 justify-between text-text-beige">
@@ -451,7 +451,7 @@ export function PackageInformationCardPnC(props) {
     return (
         <div class="h-max w-full bg-transparent sm:bg-gradient-to-br from-bg-purple-light to-bg-purple-dark sm:shadow border-none sm:my-6 sm:p-5 ">
             {/* <div class=" space-y-4 md:space-y-6 sm:p-8"> */}
-            <h1 class="mb-5 sm:mb-0 text-base font-bold text-left leading-tight tracking-tight text-orange-light md:text-2xl dark:text-orange-light">
+            <h1 class="mb-5 sm:mb-0 text-base font-bold text-left leading-tight tracking-tight text-orange-light md:text-lg xl:text-2xl dark:text-orange-light">
                 Package Name
             </h1>
             <div class="flex flex-col text-xs sm:text-base sm:flex-row sm:space-x-4 justify-between text-text-beige">
@@ -588,7 +588,7 @@ export function PackageInformationCardCargo(props) {
     return (
         <div class="h-max w-full bg-transparent sm:bg-gradient-to-br from-bg-purple-light to-bg-purple-dark sm:shadow border-none sm:my-6 sm:p-5 ">
             {/* <div class=" space-y-4 md:space-y-6 sm:p-8"> */}
-            <h1 class="mb-5 sm:mb-0 text-base font-bold text-left leading-tight tracking-tight text-orange-light md:text-2xl dark:text-orange-light">
+            <h1 class="mb-5 sm:mb-0 text-base font-bold text-left leading-tight tracking-tight text-orange-light md:text-lg xl:text-2xl dark:text-orange-light">
                 Package Name
             </h1>
             <div class="flex flex-col text-xs sm:text-base sm:flex-row sm:space-x-4 justify-between text-text-beige">

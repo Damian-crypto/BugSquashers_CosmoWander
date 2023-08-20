@@ -1,4 +1,6 @@
 import RadioGroupPayment from "./RadioGroupPayment";
+import FingerprintButton from "./FingerprintButton";
+import { CancelBookingButton } from "./Buttons";
 
 function BookingFormSpecial(props) {
 
@@ -9,7 +11,7 @@ function BookingFormSpecial(props) {
             <h1 class="text-xl font-bold text-center leading-tight tracking-tight text-orange-light md:text-2xl ">
                 Special Booking
             </h1>
-            <form class="space-y-4 md:space-y-6" action="#">
+            <form class="space-y-4 md:space-y-6 sm:text-sm text-xs" action="#">
                 <table class="w-full">
                     <tr>
                         <td>
@@ -71,22 +73,13 @@ function BookingFormSpecial(props) {
                 </div>
 
                 {fingerprintButton && (
-
-                    <div className="mt-10 grid grid-rows-2 items-center justify-center">
+                    <div className="h-auto flex flex-col items-center">
 
                         <div>
-                            <input type="text" name="location" id="location" placeholder="•   •   •   •   •" class="text-center block w-full p-2.5 bg-white-white  text-white-white sm:text-sm bg-opacity-10 text-opacity-100 font-bold focus:outline-none" required="" />
-                            <label for="location" class="text-center block mb-2 text-sm font-medium text-orange-light ">Code</label>
+                            <FingerprintButton handleFingerprintButtonClick={handleFingerprintClick} />
                         </div>
+                        <div class="h-12 w-full flex justify-center my-4" ><CancelBookingButton /></div>
 
-                        <button type="button" class="mx-auto w-36 inline-flex items-center justify-center p-0.5 overflow-hidden text-sm "
-                            onClick={handleFingerprintClick}
-                        >
-
-                            <span class="mx-auto w-36 relative px-5 py-2.5 transition-all ease-in duration-75 flex items-center justify-center">
-                                <img class="w-auto h-auto mr-2" src="/images/fingerprint.png" alt="logo" />
-                            </span>
-                        </button>
                     </div>
                 )}
 
