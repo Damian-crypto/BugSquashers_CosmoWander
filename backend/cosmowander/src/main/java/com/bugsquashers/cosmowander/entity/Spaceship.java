@@ -45,4 +45,10 @@ public class Spaceship {
         this.spaceshipName = spaceshipName;
         this.mode = mode;
     }
+
+    public Spaceship(String spaceshipId, String spaceshipName, int totalSeatCapacity, int spaceshipSpeed, Mode mode) {
+        this.spaceshipId = spaceshipId;
+        this.spaceshipName = spaceshipName;
+        this.mode = mode;
+    }
 }

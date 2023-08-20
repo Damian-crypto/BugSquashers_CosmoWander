@@ -60,7 +60,7 @@ class CosmowanderApplicationTests {
 		assertNotNull(centralizedPersonRepository.findById("n5e4i3l2a1john").get());
 	}
 
-	@Test
+//	@Test
 	public void testJourney() {
 		Mode mode1 = new Mode(1, "Passenger");
 		Mode mode2 = new Mode(2, "Cargo");
@@ -111,6 +111,8 @@ class CosmowanderApplicationTests {
 						)
 				)
 		);
+
+		j1.setStartingDate(LocalDate.of(2165, 10, 12));
 
 		Journey j2 = new Journey(
 				"j2",

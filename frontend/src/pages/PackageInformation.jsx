@@ -11,7 +11,7 @@ function PackageInformation() {
 
     const navigate = useNavigate();
     const [currentSlide, setCurrentSlide] = useState(0);
-    const [mode, setMode] = useState(1);
+    const [mode, setMode] = useState(0);
     // 0 = passenger 
     // 1 = passenger & cargo 
     // 2 = cargo 

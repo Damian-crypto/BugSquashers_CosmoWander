@@ -16,8 +16,8 @@ function Register() {
         try {
             const response = await axios.post(`http://localhost:8080/api/v1/auth/register`, { 'sid': fingerprintCode });
             localStorage.setItem('token', response.data.jwtToken);
-            showRegisterButton(true)
-            showFingerprintButton(false)
+            // showRegisterButton(true)
+            // showFingerprintButton(false)
             navigate('/login');
         } catch (error) {
             console.error(error);

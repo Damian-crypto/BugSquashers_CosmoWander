@@ -187,7 +187,7 @@ function Home() {
                 pDepartureTime={packagedata.departure_time}
                 pTicketPrice={packagedata.ticket_price}
                 pDescription={packagedata.description}
-                onViewMore={() => navigate('/package-information')}
+                onViewMore={() => navigate(`/packageinformation/${packagedata.id}`)}
               />
             </div>
           )
