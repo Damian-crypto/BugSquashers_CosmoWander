@@ -1,4 +1,6 @@
-function Carousel (props) {
+import CountdownTimer from "./CountdownTimer";
+
+function Carousel2 (props) {
 
     const {currentSlide, setCurrentSlide, nextSlide, prevSlide} = props;
     return(
@@ -7,7 +9,11 @@ function Carousel (props) {
                         <div class="relative h-44 lg:h-72 overflow-hidden">
                             {/* <!-- Item 1 --> */}
                             <div class={currentSlide === 0 ? "duration-700 ease-in-out" : "hidden"} data-carousel-itemScope="active">
+                                <div className="flex justify-center">
+                                    <CountdownTimer />
+                                </div>
                                 <img src="../src/assets/package_images/6.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+                                
                             </div>
                             {/* <!-- Item 2 --> */}
                             <div class={currentSlide === 1 ? "duration-700 ease-in-out" : "hidden"} data-carousel-item>
@@ -57,4 +63,4 @@ function Carousel (props) {
     );
 }
 
-export default Carousel;
+export default Carousel2;
