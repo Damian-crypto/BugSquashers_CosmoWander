@@ -2,9 +2,11 @@ function Carousel (props) {
 
     const {currentSlide, setCurrentSlide, nextSlide, prevSlide} = props;
     return(
-        <div id="indicators-carousel" class="sm:top-0 relative z-20 h-1/2 w-full" data-carousel="static">
+
+        <div id="indicators-carousel" class="sm:top-0 relative z-20 w-full mb-2" data-carousel="static">
                         {/* <!-- Carousel wrapper --> */}
-                        <div class="relative h-44 lg:h-72 overflow-hidden">
+                        <div class="relative sm:h-56 overflow-hidden  xl:h-96 md:h-56 h-36 ">
+
                             {/* <!-- Item 1 --> */}
                             <div class={currentSlide === 0 ? "duration-700 ease-in-out" : "hidden"} data-carousel-itemScope="active">
                                 <img src="../src/assets/package_images/6.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />

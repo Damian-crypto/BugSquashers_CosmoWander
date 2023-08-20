@@ -3,7 +3,7 @@ function ConfirmationModal (props) {
     const { message, handleYesButtonClick, handleNoButtonClick } = props;    
 
     return(
-        <div class="backdrop-blur-sm bg-white/30 flex flex-col items-center justify-center absolute w-2/3 h-90 top-32 border-l-2 border-orange-light text-text-purple-light text-2xl">
+        <div class="z-50 backdrop-blur-sm bg-white/30 h-full w-full top-0  flex flex-col items-center justify-center absolute sm:w-2/3 sm:h-90 sm:top-10 border-l-2 border-orange-light text-bg-purple-dark text-2xl font-bold">
                         <div class="w-2/3 text-center">
                             <p>{message}</p>
                         </div>
