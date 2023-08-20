@@ -28,4 +28,5 @@ public class Booking {
     private char paymentMethod;
     private LocalDate departureDate;
     private LocalTime departureTime;
+    private Integer journeyId;
 }

@@ -62,6 +62,4 @@ public class BookingController {
         String message = bookingService.updateBooking(bookingUpdateDTO);
         return message;
     }
-
-
 }

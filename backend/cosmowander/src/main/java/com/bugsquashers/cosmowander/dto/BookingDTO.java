@@ -19,4 +19,5 @@ public class BookingDTO {
     private char paymentMethod;
     private LocalDate departureDate;
     private LocalTime departureTime;
+    private Integer journeyId;
 }
