@@ -2,11 +2,14 @@ import React from "react";
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react'
 import FingerprintButton from "../components/FingerprintButton";
+import axios from "axios";
 
 function Register() {
 
     const [registerButton, showRegisterButton] = useState(false)
     const [fingerprintButton, showFingerprintButton] = useState(true)
+    const [fingerprintCode, setFingerprintCode] = useState("")
+    const [responseData, setResponseData] = useState({})
     const navigate = useNavigate();
 
     const handleRegisterButtonClick = () => {
@@ -21,10 +24,17 @@ function Register() {
         showFingerprintButton(true)
     }
 
-    const handleFingerprintClick = () => {
-        showRegisterButton(true)
-        showFingerprintButton(false)
-    }
+    const handleFingerprintClick = async () => {
+        const fingerprint = fingerprintCode;
+        try {
+            const response = await axios.post('http://localhost:8080/api/v1/universe', { 'sid': fingerprint });
+            setResponseData(response.data);
+            showRegisterButton(true)
+            showFingerprintButton(false)
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
     return (
         <div className="bg-gradient-to-br from-bg-purple-light to-bg-purple-dark sm:bg-white sm:bg-hero-image sm:h-max bg-cover bg-no-repeat relative bg-center " >
@@ -54,14 +64,14 @@ function Register() {
                         <h1 class="text-xl font-bold text-center leading-tight tracking-tight text-orange-light md:text-2xl ">
                             Registration
                         </h1>
-                        <form class="space-y-4 md:space-y-6" action="#">
+                        <form class="space-y-4 md:space-y-6 sm:text-sm text-xs" action="#">
                             <table class="w-full">
                                 <tr class="grid gap-4 grid-cols-2">
                                     <td>
                                         <div>
                                             <label for="fname" class="block mb-2 text-sm font-medium text-orange-light ">First Name</label>
                                             <div class="border-l-2 border-orange-light w-full ">
-                                                <input type="text" name="fname" id="fname" value="First Name" class="block w-full p-2.5 bg-white-white  text-white-white sm:text-sm bg-opacity-10 text-opacity-100 font-bold focus:outline-none focus:textColor" required="" disabled />
+                                                <input type="text" name="fname" id="fname" placeholder="First Name" value={responseData.fisrstName} class="block w-full p-2.5 bg-white-white  text-white-white sm:text-sm bg-opacity-10 text-opacity-100 font-bold focus:outline-none focus:textColor" required="" disabled />
                                             </div>
                                         </div>
                                     </td>
@@ -69,7 +79,7 @@ function Register() {
                                         <div>
                                             <label for="lname" class="block mb-2 text-sm font-medium text-orange-light ">Last Name</label>
                                             <div class="border-l-2 border-orange-light w-full ">
-                                                <input type="text" name="lname" id="lname" value="Last Name" class="block w-full p-2.5 bg-white-white  text-white-white sm:text-sm bg-opacity-10 text-opacity-100 font-bold focus:outline-none" required="" disabled />
+                                                <input type="text" name="lname" id="lname" placeholder="Last Name" value={responseData.LastName} class="block w-full p-2.5 bg-white-white  text-white-white sm:text-sm bg-opacity-10 text-opacity-100 font-bold focus:outline-none" required="" disabled />
                                             </div>
                                         </div>
                                     </td>
@@ -79,7 +89,7 @@ function Register() {
                                         <div>
                                             <label for="location" class="block mb-2 text-sm font-medium text-orange-light ">Location</label>
                                             <div class="border-l-2 border-orange-light w-full ">
-                                                <input type="text" name="location" id="location" value="Planet" class="block w-full p-2.5 bg-white-white  text-white-white sm:text-sm bg-opacity-10 text-opacity-100 font-bold focus:outline-none" required="" disabled />
+                                                <input type="text" name="location" id="location" placeholder="Planet" value={responseData.location} class="block w-full p-2.5 bg-white-white  text-white-white sm:text-sm bg-opacity-10 text-opacity-100 font-bold focus:outline-none" required="" disabled />
                                             </div>
                                         </div>
                                     </td>
@@ -90,7 +100,11 @@ function Register() {
 
                             {fingerprintButton && (
 
-                                <FingerprintButton handleFingerprintButtonClick={handleFingerprintClick} />
+                                <FingerprintButton
+                                    handleFingerprintButtonClick={handleFingerprintClick}
+                                    fingerprintCode={fingerprintCode}
+                                    setFingerprintCode={setFingerprintCode}
+                                />
                             )}
 
                             {registerButton && (
