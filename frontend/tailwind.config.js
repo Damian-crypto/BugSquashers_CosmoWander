@@ -19,6 +19,7 @@ export default {
         'button-purple-highlight': '#8000FF',
         'text-beige': '#CEAB8C',
         'text-purple-light': '#D7AFFF',
+        'card-purple-light': '#5C2BA9',
 
       },
       keyframes: {
@@ -29,7 +30,8 @@ export default {
         },
       },
       width: {
-        '80': '80%'
+        '80': '80%',
+        '0.5px': '0.5px',
       },
       minWidth: {
         '0': '0',
@@ -37,6 +39,16 @@ export default {
         '1/2': '50%',
         '3/4': '75%',
         'full': '100%',
+      },
+      borderWidth: {
+        '0.5': '0.5px',
+        DEFAULT: '1px',
+        '0': '0',
+        '2': '2px',
+        '3': '3px',
+        '4': '4px',
+        '6': '6px',
+        '8': '8px',
       },
       height:{
         '80': '80%',
@@ -49,6 +61,14 @@ export default {
       },
       dropShadow: {
         '3xl': '2px 5px 3px rgba(0, 0, 0, 0.5)',
+      },
+      spacing: {
+        '0.5px': '0.5px',
+        '151.5px': '151.5px',
+        '177px': '177px',
+        '60px' : '60px',
+        '10%': '10%',
+        '1/5': '20%',
       }
 
     },

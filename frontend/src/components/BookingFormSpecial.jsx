@@ -79,7 +79,7 @@ function BookingFormSpecial(props) {
                             <label for="location" class="text-center block mb-2 text-sm font-medium text-orange-light ">Code</label>
                         </div>
 
-                        <button class="mx-auto w-36 inline-flex items-center justify-center p-0.5 overflow-hidden text-sm "
+                        <button type="button" class="mx-auto w-36 inline-flex items-center justify-center p-0.5 overflow-hidden text-sm "
                             onClick={handleFingerprintClick}
                         >
 
@@ -94,14 +94,14 @@ function BookingFormSpecial(props) {
 
                     <div className="mt-10 flex items-center justify-center">
 
-                        <button class="mx-4 w-36 inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
+                        <button type="button" class="mx-4 w-36 inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
                             onClick={handleCancelButtonClick}
                         >
                             <span class="mx-auto w-36 relative px-5 py-2.5 transition-all ease-in duration-75 bg-gray-900 group-hover:bg-opacity-0">
                                 Cancel
                             </span>
                         </button>
-                        <button class="mx-4  w-36 inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
+                        <button type="button" class="mx-4  w-36 inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800"
                             onClick={handleConfirmButtonClick}
                         >
                             <span class="mx-auto w-36 relative px-5 py-2.5 transition-all ease-in duration-75 bg-gray-900 group-hover:bg-opacity-0">

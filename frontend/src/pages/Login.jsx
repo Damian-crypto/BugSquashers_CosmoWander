@@ -38,7 +38,7 @@ function Login() {
                         <h1 class="mb-14 sm:mb-0 text-2xl font-bold text-center leading-tight tracking-tight text-orange-light md:text-2xl dark:text-orange-light">
                             Login
                         </h1>
-                        <form class="space-y-4 md:space-y-6" action="#">
+                        <form class="text-xs sm:text-base space-y-4 md:space-y-6" action="#">
                             <div class="text-white-white text-center">
                                 <p>“Step beyond the familiar, and embrace the extraordinary”</p>
                             </div>
