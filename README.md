@@ -137,7 +137,7 @@ npm install vite
 
 npm run dev (This will start the development server)
 
-### All together
+### Installation
 1. `cd backend`
 2. `mvn install` (You should have maven installed locally).
 3. `cd target`
