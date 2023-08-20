@@ -11,6 +11,24 @@ import MyTrips from './pages/MyTrips'
 
 function App() {
 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = async (e, sid) => {
+    e.preventDefault();
+    
+    try {
+      const response = await axios.post('http://localhost:8080/api/v1/universe', {
+        'sid': sid
+	    });
+      const token = response.data.token;
+      
+      localStorage.setItem('token', token);
+      setIsLoggedIn(true);
+    } catch (error) {
+      console.error('Login failed:', error);
+    }
+  };
+
   return (
     <>
       <div className="font-space-mono">

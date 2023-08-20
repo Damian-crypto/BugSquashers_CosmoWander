@@ -13,9 +13,11 @@ import java.time.LocalTime;
 @AllArgsConstructor
 @Data
 @Table(name = "journey_stations")
+@IdClass(JourneyStationId.class)
 public class JourneyStation {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private String journeyId;
+    @ManyToOne
+    private Journey journey;
+    @Id
     private String stationId;
 }

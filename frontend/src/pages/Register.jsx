@@ -3,8 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react'
 import FingerprintButton from "../components/FingerprintButton";
 
-
-
 function Register() {
 
     const [registerButton, showRegisterButton] = useState(false)

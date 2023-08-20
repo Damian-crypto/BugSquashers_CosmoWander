@@ -1,11 +1,10 @@
 package com.bugsquashers.cosmowander.entity;
 
 import jakarta.persistence.*;
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.Date;
 
 @Entity
 @NoArgsConstructor
@@ -14,11 +13,25 @@ import java.util.Date;
 @Table(name = "spaceship")
 public class Spaceship {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private String spaceshipRegId;
+    @Column(name="spaceshipId")
+    private String spaceshipId;
 
     private String spaceshipName;
     private int totalSeatCapacity;
     private int spaceshipSpeed;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="modeId")
+    private Mode mode;
+
+    public Spaceship(String spaceshipId, String spaceshipName) {
+        this.spaceshipId = spaceshipId;
+        this.spaceshipName = spaceshipName;
+    }
+
+    public Spaceship(String spaceshipId, String spaceshipName, Mode mode) {
+        this.spaceshipId = spaceshipId;
+        this.spaceshipName = spaceshipName;
+        this.mode = mode;
+    }
 }

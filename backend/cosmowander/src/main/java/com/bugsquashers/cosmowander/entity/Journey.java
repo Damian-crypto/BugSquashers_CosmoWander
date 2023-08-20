@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -15,12 +16,10 @@ import java.time.LocalTime;
 @Table(name = "journey")
 public class Journey {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private String journeyId;
     private String startingStationId;
     private LocalDate startingDate;
     private LocalDate startingTime;
-    private String stationId;
     private LocalDate arrivalDate;
     private int duration;
     private int distance;
@@ -28,6 +27,27 @@ public class Journey {
     private int noOfInterchanges;
     private int totalCost;
     private int weight;
-    private LocalDate departureDate;
-    private LocalTime departureTime;
+    private int destinationId;
+    private LocalDate departure;
+
+    @OneToMany(cascade = CascadeType.PERSIST)
+    @JoinColumn(name="journey")
+    private List<JourneyStation> station;
+
+    @OneToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name="spaceshipId")
+    private Spaceship spaceship;
+
+    public Journey(String journeyId, LocalDate departure, int destinationId) {
+        this.departure = departure;
+        this.destinationId = destinationId;
+        this.journeyId = journeyId;
+    }
+
+    public Journey(String journeyId,LocalDate departure, int destinationId, Spaceship spaceship) {
+        this.departure = departure;
+        this.destinationId = destinationId;
+        this.spaceship = spaceship;
+        this.journeyId = journeyId;
+    }
 }
