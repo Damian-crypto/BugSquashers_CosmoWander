@@ -12,7 +12,7 @@ function Home() {
   const packageData = [
     {
       id: 1,
-      title: "Cosmo Wander Package No.1",
+      title: "Package No.1",
       departure_time: "2023-03-12",
       ticket_price: "99",
       imageUrl: "../src/assets/package_images/3.png",
@@ -20,7 +20,7 @@ function Home() {
     },
     {
       id: 2,
-      title: "Cosmo Wander Package No.2",
+      title: "Package No.2",
       departure_time: "2022-02-13",
       ticket_price: "99",
       imageUrl: "../src/assets/package_images/1.png",
@@ -28,7 +28,7 @@ function Home() {
     },
     {
       id: 3,
-      title: "Cosmo Wander Package No.3",
+      title: "Package No.3",
       departure_time: "2022-05-12",
       ticket_price: "99",
       imageUrl: "../src/assets/package_images/2.png",
@@ -36,7 +36,7 @@ function Home() {
     },
     {
       id: 4,
-      title: "Cosmo Wander Package No.4",
+      title: "Package No.4",
       departure_time: "2022-05-12",
       ticket_price: "99",
       imageUrl: "../src/assets/package_images/4.png",
@@ -44,7 +44,7 @@ function Home() {
     },
     {
       id: 5,
-      title: "Cosmo Wander Package No.5",
+      title: "Package No.5",
       departure_time: "2022-05-12",
       ticket_price: "99",
       imageUrl: "../src/assets/package_images/6.png",
@@ -52,7 +52,7 @@ function Home() {
     },
     {
       id: 6,
-      title: "Cosmo Wander Package No.6",
+      title: "Package No.6",
       departure_time: "2022-05-12",
       ticket_price: "99",
       imageUrl: "../src/assets/package_images/5.png",
@@ -60,7 +60,7 @@ function Home() {
     },
     {
       id: 7,
-      title: "Cosmo Wander Package No.7",
+      title: "Package No.7",
       departure_time: "2022-05-12",
       ticket_price: "99",
       imageUrl: "../src/assets/package_images/2.png",
@@ -68,7 +68,7 @@ function Home() {
     },
     {
       id: 8,
-      title: "Cosmo Wander Package No.8",
+      title: "Package No.8",
       departure_time: "2022-05-12",
       ticket_price: "99",
       imageUrl: "../src/assets/package_images/1.png",
@@ -76,7 +76,7 @@ function Home() {
     },
     {
       id: 9,
-      title: "Cosmo Wander Package No.9",
+      title: "Package No.9",
       departure_time: "2022-05-12",
       ticket_price: "99",
       imageUrl: "../src/assets/package_images/3.png",
@@ -84,7 +84,7 @@ function Home() {
     },
     {
       id: 10,
-      title: "Cosmo Wander Package No.10",
+      title: "Package No.10",
       departure_time: "2022-05-12",
       ticket_price: "99",
       imageUrl: "../src/assets/package_images/4.png",
@@ -92,7 +92,7 @@ function Home() {
     },
     {
       id: 11,
-      title: "Cosmo Wander Package No.11",
+      title: "Package No.11",
       departure_time: "2022-05-12",
       ticket_price: "99",
       imageUrl: "../src/assets/package_images/5.png",
@@ -100,7 +100,7 @@ function Home() {
     },
     {
       id: 12,
-      title: "Cosmo Wander Package No.12",
+      title: "Package No.12",
       departure_time: "2022-05-12",
       ticket_price: "99",
       imageUrl: "../src/assets/package_images/6.png",
@@ -140,43 +140,80 @@ function Home() {
         />
 
       </div>
-      <div className= 'mx-5'>
-      <div className="relative isolate sm:w-2/3 mx-auto pb-8 pt-32 sm:pt-48 lg:pt-48 grid grid-cols-2 sm:grid-cols-3 gap-5">
-        <div>
-          
-          <select id="Destination" class="  block w-full p-2.5  bg-card-purple-light bg-opacity-30 border-2  border-indigo-600 shadow placeholder-card-purple-light text-white focus:ring-blue-500  focus:border-blue-500 ">
-            <option selected>Destination</option>
-            <option value="VE">Venus</option>
-            <option value="MA">Mars</option>
-            <option value="JU">Jupiter</option>
-            <option value="SA">Saturn</option>
-            <option value="NP">Neptune</option>
-          </select>
-        </div>
+      <div className='mx-5'>
+        <div className="relative isolate sm:w-2/3 mx-auto pb-8 pt-32 sm:pt-48 lg:pt-48 grid grid-cols-2 sm:grid-cols-3 gap-5">
+          <div>
 
-        <div>
-          
-          <select id="countries" class="  block w-full p-2.5   bg-card-purple-light bg-opacity-30 border-2  border-indigo-600 shadow placeholder-card-purple-light text-white focus:ring-blue-500  focus:border-blue-500 ">
-            <option selected>Mode</option>
-            <option value="pa">Passenger</option>
-            <option value="p&c">Passenger & Cargo</option>
-            <option value="ca">Cargo</option>
-            <option value="sp">Special</option>
-          </select>
-        </div>
+            <select id="Destination" class="  block w-full p-2.5  bg-card-purple-light bg-opacity-30 border-2  border-indigo-600 shadow placeholder-card-purple-light text-white focus:ring-blue-500  focus:border-blue-500 ">
+              <option class="text-bg-purple-light" selected>Destination</option>
+              <option class="text-bg-purple-light" value="VE">Venus</option>
+              <option class="text-bg-purple-light" value="MA">Mars</option>
+              <option class="text-bg-purple-light" value="JU">Jupiter</option>
+              <option class="text-bg-purple-light" value="SA">Saturn</option>
+              <option class="text-bg-purple-light" value="NP">Neptune</option>
+            </select>
+          </div>
 
-        <div>
-          
-          <div id="countries" class="  block w-full p-2.5   bg-card-purple-light bg-opacity-30 border-2  border-indigo-600 shadow placeholder-card-purple-light text-white focus:ring-blue-500  focus:border-blue-500 ">
-            <option selected>Departure</option>
+          <div>
+
+            <select id="countries" class="  block w-full p-2.5   bg-card-purple-light bg-opacity-30 border-2  border-indigo-600 shadow placeholder-card-purple-light text-white focus:ring-blue-500  focus:border-blue-500 ">
+              <option class="text-bg-purple-light hover:text-orange-light" selected>Mode</option>
+              <option class="text-bg-purple-light" value="pa">Passenger</option>
+              <option class="text-bg-purple-light" value="p&c">Passenger & Cargo</option>
+              <option class="text-bg-purple-light" value="ca">Cargo</option>
+              <option class="text-bg-purple-light" value="sp">Special</option>
+            </select>
+          </div>
+
+          <div>
+
+            <div id="countries" class="  block w-full p-2.5   bg-card-purple-light bg-opacity-30 border-2  border-indigo-600 shadow placeholder-card-purple-light text-white focus:ring-blue-500  focus:border-blue-500 ">
+              <option selected>Departure</option>
+            </div>
           </div>
         </div>
-      </div>
 
       </div>
 
       {/* card container started*/}
       <div className="relative items-center justify-center isolate mx-5 sm:mx-8 md:mx-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <PackageCard
+          pImage="../src/assets/package_images/2.png"
+          pTitle='Jupiter Retreat'
+          pDepartureTime="2160-08-2815:30"
+          pTicketPrice="99"
+          pDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum!"
+          onViewMore={() => navigate(`/packageinformation/0`)}
+          Mode="Passenger"
+        />
+        <PackageCard
+          pImage="../src/assets/package_images/2.png"
+          pTitle='Mars Expeditor'
+          pDepartureTime="2160-08-2815:30"
+          pTicketPrice="99"
+          pDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum!"
+          onViewMore={() => navigate(`/packageinformation/1`)}
+          Mode="Passenger&Cargo"
+        />
+        <PackageCard
+          pImage="../src/assets/package_images/2.png"
+          pTitle='Red Planet Express'
+          pDepartureTime="2160-08-2815:30"
+          pTicketPrice="99"
+          pDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum!"
+          onViewMore={() => navigate(`/packageinformation/2`)}
+          Mode="Cargo"
+        />
+        <PackageCard
+          pImage="../src/assets/package_images/2.png"
+          pTitle='Saturn Spectacular'
+          pDepartureTime="2160-08-2815:30"
+          pTicketPrice="99"
+          pDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborumnumquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiumoptio, eaque rerum!"
+          onViewMore={() => navigate(`/packageinformation/3`)}
+          Mode="Special"
+        />
+
 
         {packageData.map((packagedata) => {
           return (
@@ -188,6 +225,7 @@ function Home() {
                 pTicketPrice={packagedata.ticket_price}
                 pDescription={packagedata.description}
                 onViewMore={() => navigate(`/packageinformation/${packagedata.id}`)}
+                Mode="Passenger"
               />
             </div>
           )
@@ -206,12 +244,12 @@ function Home() {
           <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
               <a href="#" class="flex items-center">
-              <img
-                className="h-20 w-auto"
-                src="/images/logo.png"
-                alt="logo"
-              />
-                
+                <img
+                  className="h-20 w-auto"
+                  src="/images/logo.png"
+                  alt="logo"
+                />
+
               </a>
             </div>
             <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">

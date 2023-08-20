@@ -10,7 +10,7 @@ function FingerprintButton(props) {
                 <label for="location" class="text-center block mb-2 text-sm font-medium text-orange-light ">Code</label>
             </div>
 
-            <button class="mx-auto w-36 inline-flex items-center justify-center p-0.5 overflow-hidden text-sm "
+            <button type="button" class="mx-auto w-36 inline-flex items-center justify-center p-0.5 overflow-hidden text-sm "
                 onClick={handleFingerprintButtonClick}
             >
 

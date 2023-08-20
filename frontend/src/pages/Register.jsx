@@ -12,16 +12,35 @@ function Register() {
     const [responseData, setResponseData] = useState({})
     const navigate = useNavigate();
 
+    const userData1 = {
+        firstName: "Amani",
+        lastName: "Vidanage",
+        location: "Earth"
+    }
+
+    const userData2 = {
+        firstName: "Pulara",
+        lastName: "Weerasinghe",
+        location: "Mars"
+    }
+
+    const noData = { 
+        firstName: "",
+        lastName: "",
+        location: "" 
+    }
+
     const handleRegisterButtonClick = async () => {
-        try {
-            const response = await axios.post(`http://localhost:8080/api/v1/auth/register`, { 'sid': fingerprintCode });
-            localStorage.setItem('token', response.data.jwtToken);
-            // showRegisterButton(true)
-            // showFingerprintButton(false)
-            navigate('/login');
-        } catch (error) {
-            console.error(error);
-        }
+        // try {
+        //     const response = await axios.post(`http://localhost:8080/api/v1/auth/register`, { 'sid': fingerprintCode });
+        //     localStorage.setItem('token', response.data.jwtToken);
+        //     // showRegisterButton(true)
+        //     // showFingerprintButton(false)
+        //     navigate('/login');
+        // } catch (error) {
+        //     console.error(error);
+        // }
+        navigate('/login')
     }
     const handleBackButtonClick = () => {
         navigate('/');
@@ -30,18 +49,29 @@ function Register() {
     const handleCancelButtonClick = () => {
         showRegisterButton(false)
         showFingerprintButton(true)
+        setResponseData(noData)
+        setFingerprintCode("")
     }
 
     const handleFingerprintClick = async () => {
         const fingerprint = fingerprintCode;
-        try {
-            const response = await axios.get(`http://localhost:8080/api/v1/universe/${fingerprint}`);
-            setResponseData(response.data);
-            showRegisterButton(true)
-            showFingerprintButton(false)
-        } catch (error) {
-            console.error(error);
+        // try {
+        //     const response = await axios.get(`http://localhost:8080/api/v1/universe/${fingerprint}`);
+        //     setResponseData(response.data);
+        //     showRegisterButton(true)
+        //     showFingerprintButton(false)
+        // } catch (error) {
+        //     console.error(error);
+        // }
+        if(fingerprint === '4456'){
+            setResponseData(userData1)
+        }else{
+            setResponseData(userData2)
         }
+        showRegisterButton(true)
+        showFingerprintButton(false)
+        
+        
     };
 
     return (

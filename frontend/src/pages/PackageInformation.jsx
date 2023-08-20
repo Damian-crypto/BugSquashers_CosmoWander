@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Carousel from "../components/Carousel";
 import {
     PackageInformationCardPassenger, PackageInformationCardCargo,
@@ -10,12 +10,28 @@ import {
 function PackageInformation() {
 
     const navigate = useNavigate();
+    const location = useLocation();
     const [currentSlide, setCurrentSlide] = useState(0);
     const [mode, setMode] = useState(0);
     // 0 = passenger 
     // 1 = passenger & cargo 
     // 2 = cargo 
     // 3 = special 
+    useEffect(() => {
+        if (location.pathname === "/packageinformation/0") {
+          setMode(0);
+        }
+        if (location.pathname === "/packageinformation/1") {
+            setMode(1);
+          }
+          if (location.pathname === "/packageinformation/2") {
+            setMode(2);
+          }
+          if (location.pathname === "/packageinformation/3") {
+            setMode(3);
+          }
+      }, [location.pathname]);
+
     const nextSlide = () => {
         setCurrentSlide((prev) => (prev === 4 ? 0 : prev + 1));
     };
@@ -32,8 +48,17 @@ function PackageInformation() {
     };
 
 
-    const handleBookButtonClick = () => {
-        navigate('/booking');
+    const handleBookButtonClick1 = () => {
+        navigate('/booking/0');
+    }
+    const handleBookButtonClick2 = () => {
+        navigate('/booking/1');
+    }
+    const handleBookButtonClick3 = () => {
+        navigate('/booking/2');
+    }
+    const handleBookButtonClick4 = () => {
+        navigate('/booking/3');
     }
 
     return (
@@ -62,7 +87,7 @@ function PackageInformation() {
                     <PackageInformationCardPassenger
                         selectedRadio={selectedRadio}
                         handleRadioChange={handleRadioChange}
-                        handleBookButtonClick={handleBookButtonClick}
+                        handleBookButtonClick={handleBookButtonClick1}
                     />
                 )}
 
@@ -70,7 +95,7 @@ function PackageInformation() {
                     <PackageInformationCardPnC
                         selectedRadio={selectedRadio}
                         handleRadioChange={handleRadioChange}
-                        handleBookButtonClick={handleBookButtonClick}
+                        handleBookButtonClick={handleBookButtonClick2}
                     />
                 )}
 
@@ -78,7 +103,7 @@ function PackageInformation() {
                     <PackageInformationCardCargo
                         selectedRadio={selectedRadio}
                         handleRadioChange={handleRadioChange}
-                        handleBookButtonClick={handleBookButtonClick}
+                        handleBookButtonClick={handleBookButtonClick3}
                     />
                 )}
 
@@ -86,7 +111,7 @@ function PackageInformation() {
                     <PackageInformationCardSpecial
                         selectedRadio={selectedRadio}
                         handleRadioChange={handleRadioChange}
-                        handleBookButtonClick={handleBookButtonClick}
+                        handleBookButtonClick={handleBookButtonClick4}
                     />
                 )}
 

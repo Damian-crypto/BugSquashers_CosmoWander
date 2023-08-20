@@ -1,6 +1,6 @@
 import React from "react";
-import { useNavigate } from 'react-router-dom';
-import { useState } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react'
 import BookingFormPassenger from "../components/BookingFormPassenger";
 import BookingFormPnC from "../components/BookingFormPnC";
 import BookingFormCargo from "../components/BookingFormCargo";
@@ -22,6 +22,23 @@ function Booking() {
     // 3 = special booking
     const [isCancellation, setIsCancellation] = useState(false)
     const navigate = useNavigate();
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.pathname === "/booking/0") {
+            setBookingType(0);
+        }
+        if (location.pathname === "/booking/1") {
+            setBookingType(1);
+          }
+          if (location.pathname === "/booking/2") {
+            setBookingType(2);
+          }
+          if (location.pathname === "/booking/3") {
+            setBookingType(3);
+          }
+      }, [location.pathname]);
+
 
     const handleCancelButtonClick = () => {
         setIsCancellation(true)

@@ -1,13 +1,22 @@
 import React from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import FingerprintButton from "../components/FingerprintButton";
-
+import { useState } from 'react'    
 
 function Login() {
     const navigate = useNavigate();
+    const [fingerprintCode, setFingerprintCode] = useState("")
+    const [alert, setAlert] = useState("")
 
-    const handleLoginButtonClick = () => {
-        navigate('/home');
+    const handleLoginButtonClick = async () => {
+        if (fingerprintCode === "4456") {
+            navigate('/home');
+        } else {
+            setAlert("User Not Found!");
+            setFingerprintCode("");
+            navigate('/login');
+
+        }
     }
     const handleBackButtonClick = () => {
         navigate('/');
@@ -52,8 +61,12 @@ function Login() {
                                 <p><span class="font-bold" >CosmosWander</span> invites you to explore the unknown, marvel at the universe, and find your next adventure in the vast expanse</p>
                             </div>
 
-                            <FingerprintButton handleFingerprintButtonClick={handleLoginButtonClick} />
-
+                            <FingerprintButton
+                                handleFingerprintButtonClick={handleLoginButtonClick}
+                                fingerprintCode={fingerprintCode}
+                                setFingerprintCode={setFingerprintCode}
+                            />
+                            <span class="flex justify-center text-center text-sm font-light text-red-600" >{alert}</span>
                             <p class="text-center text-sm font-light text-orange-light dark:text-orange-light">
                                 Don’t have an account yet? <button class="font-bold text-primary-600 hover:underline dark:text-primary-500" onClick={handleRegisterButtonClick}>Register Now</button>
                             </p>

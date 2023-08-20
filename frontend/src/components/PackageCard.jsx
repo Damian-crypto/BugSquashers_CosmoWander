@@ -1,6 +1,6 @@
 import React from "react";
 
-function PackageCard({pImage, pTitle, pDepartureTime, pTicketPrice, onViewMore }) {
+function PackageCard({pImage, pTitle, pDepartureTime, pTicketPrice, onViewMore, Mode }) {
   return (
     <div className="w-full max-w-sm border-2 border-indigo-600 shadow bg-card-purple-light bg-opacity-30" >
         
@@ -13,7 +13,9 @@ function PackageCard({pImage, pTitle, pDepartureTime, pTicketPrice, onViewMore }
           </a>
           <div className="flex items-left mt-2.5 mb-5">
               <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">{pDepartureTime}</span>
+              <span className="bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-800">{Mode}</span>
           </div>
+          
           <div className="flex items-center justify-between">
                <span className="text-3xl font-bold text-gray-900 dark:text-white">{"$" + pTicketPrice}</span>
               {/*<a href="#" onClick={onViewMore} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">View More</a> */}

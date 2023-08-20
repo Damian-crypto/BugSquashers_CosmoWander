@@ -29,7 +29,7 @@ function RadioGroup(props) {
                 <div className="ml-8 text-sm">
                     {selectedRadio === 'default-radio-1' && (
                         <p className="text-xs font-normal text-text-beige ">
-                            description for the first radio
+                            Normal cabin package ensuring a comfortable and exciting travel experience beyond Earth
                         </p>
                     )}
                 </div>
@@ -55,7 +55,7 @@ function RadioGroup(props) {
                 <div className="ml-8 text-sm">
                     {selectedRadio === 'default-radio-2' && (
                         <p className="text-xs font-normal text-text-beige">
-                            description for the second radio
+                            Stay connected even amidst the stars with our Workaholic Package, offering seamless communication and productivity tools against the backdrop of the cosmos
                         </p>
                     )}
                 </div>
@@ -81,7 +81,7 @@ function RadioGroup(props) {
                 <div className="ml-8 text-sm">
                     {selectedRadio === 'default-radio-3' && (
                         <p className="text-xs font-normal text-text-beige">
-                            description for the third radio
+                            with tailored experiences and accommodations designed to create unforgettable interplanetary memories for the whole family
                         </p>
                     )}
                 </div>
@@ -107,7 +107,7 @@ function RadioGroup(props) {
                 <div className="ml-8 text-sm">
                     {selectedRadio === 'default-radio-4' && (
                         <p className="text-xs font-normal text-text-beige">
-                            description for the forth radio
+                            equipped to provide medical assistance and peace of mind while exploring new frontiers
                         </p>
                     )}
                 </div>
@@ -144,7 +144,7 @@ function RadioGroup2(props) {
                 <div className="ml-8 text-sm">
                     {selectedRadio === 'default-radio-1' && (
                         <p className="text-xs font-normal text-text-beige ">
-                            description for the first radio
+                           
                         </p>
                     )}
                 </div>
@@ -170,7 +170,6 @@ function RadioGroup2(props) {
                 <div className="ml-8 text-sm">
                     {selectedRadio === 'default-radio-2' && (
                         <p className="text-xs font-normal text-text-beige">
-                            description for the second radio
                         </p>
                     )}
                 </div>
@@ -196,7 +195,6 @@ function RadioGroup2(props) {
                 <div className="ml-8 text-sm">
                     {selectedRadio === 'default-radio-3' && (
                         <p className="text-xs font-normal text-text-beige">
-                            description for the third radio
                         </p>
                     )}
                 </div>
@@ -222,7 +220,6 @@ function RadioGroup2(props) {
                 <div className="ml-8 text-sm">
                     {selectedRadio === 'default-radio-4' && (
                         <p className="text-xs font-normal text-text-beige">
-                            description for the forth radio
                         </p>
                     )}
                 </div>

@@ -25,7 +25,6 @@ function RadioGroupPayment(props) {
                 <div className="ml-8 text-sm">
                     {selectedRadio === 'default-radio-1' && (
                         <p className="text-xs font-normal text-text-beige ">
-                            description for the first radio
                         </p>
                     )}
                 </div>
@@ -51,7 +50,7 @@ function RadioGroupPayment(props) {
                 <div className="ml-8 text-sm">
                     {selectedRadio === 'default-radio-2' && (
                         <p className="text-xs font-normal text-text-beige">
-                            description for the second radio
+                           
                         </p>
                     )}
                 </div>
@@ -77,7 +76,7 @@ function RadioGroupPayment(props) {
                 <div className="ml-8 text-sm">
                     {selectedRadio === 'default-radio-3' && (
                         <p className="text-xs font-normal text-text-beige">
-                            description for the third radio
+                           
                         </p>
                     )}
                 </div>
