@@ -20,4 +20,6 @@ public interface JourneyService {
 //    String saveJourney(JourneySaveRequestDTO journeySaveRequestDTO);
 
     void createJourney(JourneySaveRequestDTO journeySaveRequestDTO);
+
+    Journey getJourneyById(String journeyId);
 }

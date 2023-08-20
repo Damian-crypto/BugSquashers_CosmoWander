@@ -4,7 +4,7 @@ import CountdownTimer from "../components/CountdownTimer";
 import PackageCard from "../components/PackageCard";
 import { useNavigate } from 'react-router-dom';
 import Carousel2 from "../components/Carousel2";
-
+import axios from 'axios';
 
 
 function Home() {
@@ -118,8 +118,6 @@ function Home() {
     setCurrentSlide((prev) => (prev === 0 ? 4 : prev - 1));
   };
 
-
-
   return (
     <div className="bg-white bg-hero-image sm:h-auto sm:bg-cover sm:bg-local bg-center relative ">
       <div className="absolute inset-0 flex justify-center items-center h-full">
@@ -177,8 +175,28 @@ function Home() {
 
       {/* card container started*/}
       <div className="relative items-center justify-center isolate mx-5 sm:mx-8 md:mx-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      {
+        axios.get(`http://localhost:8080/api/v1/journey`).then((packageData) => {
+          packageData.map((packagedata) => {
+          
+            return (
+              <div key={packagedata.id}>
+                <PackageCard
+                  pImage={packagedata.imageUrl}
+                  pTitle={packagedata.title}
+                  pDepartureTime={packagedata.departure_time}
+                  pTicketPrice={packagedata.ticket_price}
+                  pDescription={packagedata.description}
+                  onViewMore={() => navigate(`/packageinformation/${packagedata.id}`)}
+                />
+              </div>
+            )
+          })
+        })
+      }
 
-        {packageData.map((packagedata) => {
+        {/* {packageData.map((packagedata) => {
+          
           return (
             <div key={packagedata.id}>
               <PackageCard
@@ -191,7 +209,7 @@ function Home() {
               />
             </div>
           )
-        })}
+        })} */}
 
 
       </div>

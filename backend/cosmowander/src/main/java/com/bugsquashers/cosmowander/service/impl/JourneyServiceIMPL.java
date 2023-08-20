@@ -47,9 +47,14 @@ public class JourneyServiceIMPL implements JourneyService {
         journey.setJourneyId(journeySaveRequestDTO.getJourneyId());
         journey.setDeparture(journeySaveRequestDTO.getDeparture());
         journey.setDestinationId(journeySaveRequestDTO.getDestinationId());
-        journey.setSpaceship(spaceship);
+//        journey.setSpaceship(spaceship);
 
         journeyRepo.save(journey);
+    }
+
+    @Override
+    public Journey getJourneyById(String journeyId) {
+        return journeyRepo.findById(journeyId).orElseThrow();
     }
 
     @Override

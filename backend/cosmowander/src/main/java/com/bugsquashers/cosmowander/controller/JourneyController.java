@@ -32,6 +32,11 @@ public class JourneyController {
         return journeyService.filterJourneys(journeyReq);
     }
 
+    @GetMapping("/{journeyId}")
+    public Journey getJourneyById(@PathVariable String journeyId) {
+        return journeyService.getJourneyById(journeyId);
+    }
+
     @GetMapping("/ship/mode")
     public List<String> getJourneysByMode(@RequestBody JourneyFilterRequestDTO journeyReq) {
         return journeyService.filterJourneysByShipMode(journeyReq);
