@@ -1,5 +1,17 @@
 # API Guide
 
+## Locally Install Server
+1. `mvn install` (You should have maven installed locally).
+2. `java -jar <cosmowander-version>.jar`
+
+Otherwise
+
+1. Download jar file manually with GitHub release and continue(Java 17).
+
+> Note:
+> You should have running mysql server on port 3306.
+> Otherwise configure `application.properties`
+
 ## Endpoints
 ### Retrieve a person from centralized database
 GET `/api/v1/universe/<user-id>`
