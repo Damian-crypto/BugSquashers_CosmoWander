@@ -44,3 +44,63 @@ PUT `/api/v1/booking/update`
 GET `/api/v1/booking/get-all-bookings`
 
 GET by Id `/api/v1/booking/get-by-id?id=1`
+
+### Journey Requests
+
+GET `/api/v1/journey` retrieve all journeys
+GET `api/v1/spaceship` retrieve all spaceships
+
+POST `api/v1/spaceship` create spaceship
+e.g.,
+```json
+    {
+        "spaceshipId": "",
+        "spaceshipName": "",
+        "totalSeatCapacity": 0,
+        "spaceshipSpeed": 0,
+        "mode": {
+            "modeId": 0,
+            "modeName": ""
+        }
+    }
+```
+
+POST `/api/v1/journey`
+e.g.,
+```json
+{
+        "journeyId": "j1",
+        "startingStationId": null,
+        "startingDate": null,
+        "startingTime": null,
+        "arrivalDate": null,
+        "duration": 0,
+        "distance": 0,
+        "noOfPassengers": 0,
+        "noOfInterchanges": 0,
+        "totalCost": 0,
+        "weight": 0,
+        "destinationId": 1,
+        "departure": "2321-01-02",
+        "station": [],
+        "spaceship": {
+            "spaceshipId": "sp1",
+            "spaceshipName": "Mars Expeditor",
+            "totalSeatCapacity": 0,
+            "spaceshipSpeed": 0,
+            "mode": {
+                "modeId": 1,
+                "modeName": "Passenger"
+            }
+        }
+    }
+```
+
+GET `api/v1/journey/filter`
+```json
+{
+    "destinationId": 0,
+    "departure": "",
+    "journeyMode": 0
+}
+```
