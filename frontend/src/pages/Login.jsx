@@ -25,9 +25,15 @@ function Login() {
 
 
             <div class=" w-screen sm:w-2/3 relative inset-x-0 top-0 z-50 flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-                <div className="px-1 w-full">
-                    <button className="-mx-3 block rounded-lg px-3 text-base font-semibold leading-7 text-gray-900 hover:text-button-purple-highlight" onClick={handleBackButtonClick} >
+                <div className="px-1 w-full inline-flex">
+                    <button className="invisible sm:visible -mx-3 block rounded-lg px-3 text-base font-semibold leading-7 text-gray-900 hover:text-button-purple-highlight" onClick={handleBackButtonClick} >
                         Back
+                    </button>
+                    <button className="visible sm:invisible -mx-3 block rounded-lg px-3 text-base font-semibold leading-7 text-button-purple-highlight" onClick={handleBackButtonClick} >
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={4} stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
+
                     </button>
                 </div>
                 <a href="#" class="flex items-center mb-1 text-2xl font-semibold ">

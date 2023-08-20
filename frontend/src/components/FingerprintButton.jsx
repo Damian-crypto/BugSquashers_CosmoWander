@@ -3,7 +3,7 @@ function FingerprintButton(props) {
     const { handleFingerprintButtonClick, fingerprintCode, setFingerprintCode } = props;
 
     return (
-        <div className="mt-10 grid grid-rows-2 items-center justify-center">
+        <div className="mt-2 grid grid-rows-2 items-center justify-center">
 
             <div>
                 <input type="text" name="location" id="location" placeholder="•   •   •   •   •" value={fingerprintCode} class="text-center block w-full p-2.5 bg-white-white  text-white-white sm:text-sm bg-opacity-10 text-opacity-100 font-bold focus:outline-none" required="" onChange={(e) => setFingerprintCode(e.target.value)} />
