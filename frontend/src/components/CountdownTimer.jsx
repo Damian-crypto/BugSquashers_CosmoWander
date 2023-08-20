@@ -39,11 +39,11 @@ function CountdownTimer() {
   }, []);
 
   return (
-    <div className="absolute bg-white-white backdrop-blur-sm bg-opacity-40 flex justify-center z-50">
+    <div className="absolute mt-2 sm:mt-0 bg-white-white backdrop-blur-sm bg-opacity-40 flex justify-center z-50">
       <div className="rounded-lg shadow-lg px-8 py-6">
         <div className="flex flex-col gap-4 items-center justify-between">
-          <h3 className="text-3xl font-bold text-center text-gray-1000 ">Your next trip will start</h3>
-          <span id="countdown" className="text-2xl font-semibold text-gray-700">
+          <h3 className="text-xs sm:text-3xl font-bold text-center text-gray-700 ">Your next trip will start</h3>
+          <span id="countdown" className="text-xl font-semibold text-gray-700">
             {countdown}
           </span>
         </div>

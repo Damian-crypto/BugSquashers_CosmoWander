@@ -4,6 +4,7 @@ import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const navigation = [
+    { name: 'Home', href: '#' },
     { name: 'Packages', href: '#' },
     { name: 'Destinations', href: '#' },
     { name: 'About Us', href: '#' },
@@ -87,22 +88,63 @@ function Navbar(){
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-                <div className="py-6">
+                <a
+                    href="#"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    My Profile
+                  </a>
                   <a
                     href="#"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
-                    Log in
+                    My Trips
+                  </a>
+                  <a
+                    href="#"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    FAQs
+                  </a>
+                  <a
+                    href="#"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    Customer Support
+                  </a>
+                  
+                  
+                </div>
+                <div className="py-6">
+                <a
+                    href="#"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    Packages
+                  </a>
+                  <a
+                    href="#"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    Destinations
+                  </a>
+                  <a
+                    href="#"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    About Us
+                  </a>
+                  <a
+                    href="#"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    Contact Us
+                  </a>
+                  <a
+                    href="#"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    Log Out
                   </a>
                 </div>
               </div>
@@ -113,15 +155,8 @@ function Navbar(){
         <Dialog as="div" className="hidden lg:flex" open={mobileMenu2Open} onClose={setMobileMenu2Open}>
           <div className="fixed inset-0 z-50" />
           <Dialog.Panel className=" backdrop-blur-md fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white  px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div className="flex items-center justify-between ">
-              <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">CosmoWander</span>
-                <img
-                  className="h-20 w-auto"
-                  src="/images/logo.png"
-                  alt="logo"
-                />
-              </a>
+            <div className="flex items-center justify-end ">
+              
               <button
                 type="button"
                 className="-m-2.5 rounded-md p-2.5 text-gray-700"
