@@ -8,7 +8,6 @@ import java.util.List;
 
 public interface BookingService {
 
-
     String deleteBooking(int bookingRefId);
 
     String saveBooking(BookingSaveRequestDTO bookingSaveRequestDTO);

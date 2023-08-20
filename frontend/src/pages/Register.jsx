@@ -12,8 +12,16 @@ function Register() {
     const [responseData, setResponseData] = useState({})
     const navigate = useNavigate();
 
-    const handleRegisterButtonClick = () => {
-        navigate('/login');
+    const handleRegisterButtonClick = async () => {
+        try {
+            const response = await axios.post(`http://localhost:8080/api/v1/auth/register`, { 'sid': fingerprintCode });
+            localStorage.setItem('token', response.data.jwtToken);
+            // showRegisterButton(true)
+            // showFingerprintButton(false)
+            navigate('/login');
+        } catch (error) {
+            console.error(error);
+        }
     }
     const handleBackButtonClick = () => {
         navigate('/');
@@ -27,7 +35,7 @@ function Register() {
     const handleFingerprintClick = async () => {
         const fingerprint = fingerprintCode;
         try {
-            const response = await axios.post('http://localhost:8080/api/v1/universe', { 'sid': fingerprint });
+            const response = await axios.get(`http://localhost:8080/api/v1/universe/${fingerprint}`);
             setResponseData(response.data);
             showRegisterButton(true)
             showFingerprintButton(false)
@@ -71,7 +79,7 @@ function Register() {
                                         <div>
                                             <label for="fname" class="block mb-2 text-sm font-medium text-orange-light ">First Name</label>
                                             <div class="border-l-2 border-orange-light w-full ">
-                                                <input type="text" name="fname" id="fname" placeholder="First Name" value={responseData.fisrstName} class="block w-full p-2.5 bg-white-white  text-white-white sm:text-sm bg-opacity-10 text-opacity-100 font-bold focus:outline-none focus:textColor" required="" disabled />
+                                                <input type="text" name="fname" id="fname" placeholder="First Name" value={responseData['firstName']} class="block w-full p-2.5 bg-white-white  text-white-white sm:text-sm bg-opacity-10 text-opacity-100 font-bold focus:outline-none focus:textColor" required="" disabled />
                                             </div>
                                         </div>
                                     </td>
@@ -79,7 +87,7 @@ function Register() {
                                         <div>
                                             <label for="lname" class="block mb-2 text-sm font-medium text-orange-light ">Last Name</label>
                                             <div class="border-l-2 border-orange-light w-full ">
-                                                <input type="text" name="lname" id="lname" placeholder="Last Name" value={responseData.LastName} class="block w-full p-2.5 bg-white-white  text-white-white sm:text-sm bg-opacity-10 text-opacity-100 font-bold focus:outline-none" required="" disabled />
+                                                <input type="text" name="lname" id="lname" placeholder="Last Name" value={responseData['lastName']} class="block w-full p-2.5 bg-white-white  text-white-white sm:text-sm bg-opacity-10 text-opacity-100 font-bold focus:outline-none" required="" disabled />
                                             </div>
                                         </div>
                                     </td>
@@ -89,7 +97,7 @@ function Register() {
                                         <div>
                                             <label for="location" class="block mb-2 text-sm font-medium text-orange-light ">Location</label>
                                             <div class="border-l-2 border-orange-light w-full ">
-                                                <input type="text" name="location" id="location" placeholder="Planet" value={responseData.location} class="block w-full p-2.5 bg-white-white  text-white-white sm:text-sm bg-opacity-10 text-opacity-100 font-bold focus:outline-none" required="" disabled />
+                                                <input type="text" name="location" id="location" placeholder="Planet" value={responseData['location']} class="block w-full p-2.5 bg-white-white  text-white-white sm:text-sm bg-opacity-10 text-opacity-100 font-bold focus:outline-none" required="" disabled />
                                             </div>
                                         </div>
                                     </td>

@@ -43,7 +43,7 @@ public class ApplicationUserDatasourceConfig {
             @Qualifier("UserDataSource") DataSource dataSource
     ) {
         HashMap<String, Object> props = new HashMap<>();
-        props.put("hibernate.hbm2ddl.auto", "create-drop");
+        props.put("hibernate.hbm2ddl.auto", "update");
 
         return managerFactory
                 .dataSource(userDataSource())

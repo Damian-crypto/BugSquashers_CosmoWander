@@ -32,7 +32,7 @@ public class Journey {
 
     @OneToMany(cascade = CascadeType.PERSIST)
     @JoinColumn(name="journey")
-    private List<JourneyStation> station;
+    private List<Station> station;
 
     @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name="spaceshipId")

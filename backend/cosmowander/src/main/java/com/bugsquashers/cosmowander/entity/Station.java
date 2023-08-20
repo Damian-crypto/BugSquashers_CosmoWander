@@ -12,7 +12,6 @@ import lombok.NoArgsConstructor;
 @Table(name = "stations")
 public class Station {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private String stationId;
     private String stationName;
 }

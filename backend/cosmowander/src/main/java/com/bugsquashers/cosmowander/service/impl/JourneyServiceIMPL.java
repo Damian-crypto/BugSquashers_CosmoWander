@@ -52,17 +52,6 @@ public class JourneyServiceIMPL implements JourneyService {
         journeyRepo.save(journey);
     }
 
-//    @Transactional
-//    public String saveJourney(JourneySaveRequestDTO journeySaveRequestDTO) {
-//        Journey journey = modelMapper.map(journeySaveRequestDTO, Journey.class);
-//        if (!journeyRepo.existsById(journey.getJourneyId())) {
-//            journeyRepo.save(journey);
-//            return journey.getJourneyId() + " saved successfully";
-//        } else {
-//            throw new DuplicateKeyException("Already added");
-//        }
-//    }
-
     @Override
     public List<Journey> getAll() {
         return journeyRepo.findAll();

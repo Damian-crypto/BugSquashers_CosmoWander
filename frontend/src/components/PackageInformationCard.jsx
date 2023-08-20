@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
 
 function RadioGroup(props) {
 
@@ -233,6 +235,22 @@ function RadioGroup2(props) {
 export function PackageInformationCardPassenger(props) {
 
     const { selectedRadio, handleRadioChange, handleBookButtonClick } = props;
+
+    async function fetchData() {
+        try {
+            const response = await axios.get(`http://localhost:8080/api/v1/journey`);
+            console.log(response);
+            setResponseData(response.data);
+            showRegisterButton(true)
+            showFingerprintButton(false)
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+	useEffect(() => {
+		fetchData();
+	}, []);
 
     return (
         <div class="h-max w-full bg-transparent sm:bg-gradient-to-br from-bg-purple-light to-bg-purple-dark sm:shadow border-none sm:my-6 sm:p-5 ">

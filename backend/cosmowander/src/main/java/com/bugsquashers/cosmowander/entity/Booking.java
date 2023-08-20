@@ -26,6 +26,8 @@ public class Booking {
     private int costPerSeat;
     private int totalCost;
     private char paymentMethod;
+    private int paymnetId;
     private LocalDate departureDate;
     private LocalTime departureTime;
+    private Integer journeyId;
 }

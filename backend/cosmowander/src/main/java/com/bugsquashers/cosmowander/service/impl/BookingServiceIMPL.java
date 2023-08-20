@@ -73,7 +73,8 @@ public class BookingServiceIMPL implements BookingService {
                     booking.getTotalCost(),
                     booking.getPaymentMethod(),
                     booking.getDepartureDate(),
-                    booking.getDepartureTime()
+                    booking.getDepartureTime(),
+                    booking.getJourneyId()
             );
             return bookingDTO;
         } else {
@@ -95,7 +96,8 @@ public class BookingServiceIMPL implements BookingService {
                         booking.getTotalCost(),
                         booking.getPaymentMethod(),
                         booking.getDepartureDate(),
-                        booking.getDepartureTime()
+                        booking.getDepartureTime(),
+                        booking.getJourneyId()
                 );
                 bookingDTOList.add(bookingDTO);
             }
